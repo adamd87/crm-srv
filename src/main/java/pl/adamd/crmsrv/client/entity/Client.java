@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -21,7 +22,8 @@ public class Client {
 
     private String name;
     private String surname;
-    private Address address;
+    @OneToMany
+    private List<Address> addresses;
     private String phone;
     private String email;
     private String info;

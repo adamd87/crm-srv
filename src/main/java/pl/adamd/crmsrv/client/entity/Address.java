@@ -24,5 +24,8 @@ public class Address {
     private String postCode;
     private String city;
     private String country;
+    @ManyToOne
+    @JoinColumn(name = "clients_id")
+    private Client client;
 
 }
