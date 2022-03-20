@@ -27,5 +27,8 @@ public class Address {
     @ManyToOne
     @JoinColumn(name = "clients_id")
     private Client client;
+    private boolean ofCorrespondence;
+    private boolean ofOrder;
+
 
 }
