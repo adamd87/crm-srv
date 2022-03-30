@@ -15,5 +15,6 @@ public class ClientViewResponse {
     private String phone;
     private String email;
     private String info;
-    private boolean active;
+    private boolean agreement;
+    private boolean installation;
 }

@@ -35,13 +35,15 @@ public class ClientViewServiceImpl implements ClientViewService {
                 .email(newClient.getEmail())
                 .info(newClient.getInfo())
                 .addresses(addresses)
+                .installation(newClient.isInstallation())
+                .agreement(newClient.isInstallation())
                 .build();
 
-        clientService.save(client);
+        clientService.saveClient(client);
 
         for (Address address: addresses) {
             address.setClient(client);
-            clientService.save(address);
+            clientService.saveAddress(address);
         }
 
         return clientMapper.mapClientToDto(client);

@@ -21,12 +21,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Address save(Address address) {
+    public Address saveAddress(Address address) {
         return addressRepository.save(address);
     }
 
     @Override
-    public Client save(Client client) {
+    public Client saveClient(Client client) {
         return clientRepository.save(client);
     }
 }

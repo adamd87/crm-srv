@@ -17,4 +17,6 @@ public class CreateClientRequest {
     private String email;
     private String info;
     private List<AddressesRequest> addressesList;
+    private boolean agreement;
+    private boolean installation;
 }

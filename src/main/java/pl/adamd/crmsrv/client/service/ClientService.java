@@ -8,7 +8,7 @@ import java.util.List;
 public interface ClientService {
     List<Client> findAll();
 
-    Address save(Address address);
+    Address saveAddress(Address address);
 
-    Client save(Client client);
+    Client saveClient(Client client);
 }

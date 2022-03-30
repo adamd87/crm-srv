@@ -27,10 +27,8 @@ public class Offer {
     @ManyToOne
     @JoinColumn(name = "clients_id")
     private Client client;
-
-    @OneToMany(mappedBy = "offers")
     private List<Device> devices;
-
+    private List<Installation> installationList;
     private BigDecimal totalPrice;
     private LocalDate dayOfStart;
     private LocalDate dayOfEnd;
